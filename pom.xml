@@ -28,7 +28,7 @@
 		<repository>
 			<id>serval-repository</id>
 			<name>Nexus</name>
-			<url>https://172.17.0.12:8081/nexus/content/groups/public</url>
+			<url>http://172.17.0.12:8081/nexus/content/groups/public</url>
 		</repository>
 	</repositories>
 
@@ -54,5 +54,18 @@
 		</plugins>
 	</build>
 
+
+	<distributionManagement>
+		<repository>
+			<id>central-repository</id>
+			<name>Corporate Repository Releases</name>
+			<url>http://172.17.0.12:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>central-repository</id>
+			<name>Corporate Repository Snapshots</name>
+			<url>http://172.17.0.12:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
